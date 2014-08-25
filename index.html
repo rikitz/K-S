@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
+<title>Kaixo Sensei POC</title>
+
+<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+<link href='http://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
+<script src="jquery-1.11.0.min.js"></script>
+<script src="//platform.linkedin.com/in.js" type="text/javascript">
+  lang: en_US
+</script>
+
+<script>
+var emocionesArray = new Array( "alegría", "tristeza", "amor", "odio" );
+var trabajoArray = new Array( "su formación profesional", "su carrera professional", "su sueldo", "su mejor jefe", "su peor jefe" );
+var famliaArray = new Array( "su  padre", "su madre", "sus hermanos", "sus primos", "sus nietos", "sus suegros");
+var deportesArray = new Array( "futbol", "deportes que juega/jugó", "deportes que le gustan", "deportes del colegio" );
+var historiaArray = new Array( "el mundo cuando nasció", "1978", "1994", "como el mundo ha cambiado" );
+var lugaresArray = new Array( "donde nasció", "donde cresció", "su colegio", "sus casas", "su país" );	
+
+
+window.onload = function (){
+	$( "#volver" ).hide();
+	$( "#set1" ).hide();
+	$( "#set2" ).hide();
+	$( "#set3" ).hide();
+	$( "#set4" ).hide();
+	$( "#set5" ).hide();
+	$( "#set6" ).hide();
+	$('.card').click(function() {
+		$( "#volver" ).show();
+		$("#strapline").text("Hable de una carta"); 
+		$( "#categories-menu" ).hide();
+		
+		var currentCategory = $(this).text(); 
+		switch (currentCategory)
+		{
+		case "Emociones":
+			$( "#set1").show(); 
+		  	break;
+		case "Trabajo":
+			$( "#set2").show();  
+		  	break;
+		case "Familia":
+		$( "#set3").show(); 
+		  	break;
+		case "Ocio":
+			$( "#set4").show(); 
+		  	break;
+		case "Historia":
+		$( "#set5").show();  
+		  	break;
+		case "Lugares":
+			$( "#set6").show();  
+		  	break;
+			
+		}
+
+    });
+
+}
+
+function backHome()
+{
+	
+	$( "#categories-menu" ).show();
+	$( "#set1" ).hide();
+	$( "#set2" ).hide();
+	$( "#set3" ).hide();
+	$( "#set4" ).hide();
+	$( "#set5" ).hide();
+	$( "#set6" ).hide();
+	$("#strapline").text("Elije una carta"); 
+	$( "#volver" ).hide();
+}
+
+</script>
+
+
+</head>
+    <div id = "card-set">
+    	<div ID = "top-menu"><img src="images/logo_small.jpg" alt="logo"> <div id = "strapline"> El legado de todos los días</div></div>
+       <div id = "volver" onclick="backHome()">
+        		
+                 <a href="#" class="myButton">Volver</a>
+    		</div>
+           
+        <div ID = "categories-menu">
+        	
+             <div class = "card" ID = "cat1">Emociones</div>
+             <div class = "card" ID = "cat2">Trabajo</div>
+             <div class = "card" ID = "cat3">Familia</div>
+             <div class = "card" ID = "cat4">Ocio</div>
+             <div class = "card" ID = "cat5">Historia</div>
+             <div class = "card" ID = "cat6">Lugares</div>
+        </div> 
+        <div ID = "set1">     
+             <div class = "card1"><div class="card-category-header">Emociones</div>Alegria</div>
+             <div class = "card1"><div class="card-category-header">Emociones</div>Tristeza</div>
+             <div class = "card1"><div class="card-category-header">Emociones</div>Amor</div>
+             <div class = "card1"><div class="card-category-header">Emociones</div>Celos</div>
+             <div class = "card1"><div class="card-category-header">Emociones</div>Ilusión</div>
+             <div class = "card1"><div class="card-category-header">Emociones</div>Fé</div>
+        </div>
+         <div ID = "set2">     
+             <div class = "card2"><div class="card-category-header">Trobajo</div>Su formación profesional</div>
+             <div class = "card2"><div class="card-category-header">Trobajo</div>Su carrera professional</div>
+             <div class = "card2"><div class="card-category-header">Trobajo</div>Su primer empleo</div>
+             <div class = "card2"><div class="card-category-header">Trobajo</div>Su peor sueldo</div>
+             <div class = "card2"><div class="card-category-header">Trobajo</div>Su mejor jefe</div>
+             <div class = "card2"><div class="card-category-header">Trobajo</div>Su peor jefe</div>
+        </div>
+         <div ID = "set3">     
+             <div class = "card3"><div class="card-category-header">Familia</div>Su padre</div>
+             <div class = "card3"><div class="card-category-header">Familia</div>Su madre</div>
+             <div class = "card3"><div class="card-category-header">Familia</div>Sus hermanos</div>
+             <div class = "card3"><div class="card-category-header">Familia</div>Sus primos</div>
+             <div class = "card3"><div class="card-category-header">Familia</div>Sus nietos</div>
+             <div class = "card3"><div class="card-category-header">Familia</div>Sus suegros</div>
+        </div>
+         <div ID = "set4">     
+             <div class = "card4"><div class="card-category-header">Deportes</div>EL mejor deporte del mundo</div>
+             <div class = "card4"><div class="card-category-header">Deportes</div>Deportes que jugó</div>
+             <div class = "card4"><div class="card-category-header">Deportes</div>Deportes que le gustan </div>
+             <div class = "card4"><div class="card-category-header">Deportes</div>Deportes del colegio</div>
+             <div class = "card4"><div class="card-category-header">Deportes</div>El deporte mas gracioso</div>
+             <div class = "card4"><div class="card-category-header">Deportes</div>Deportes que no usted no entiende</div>
+        </div>
+
+         <div ID = "set5">     
+             <div class = "card5"><div class="card-category-header">Historia</div>El mundo cuando nasció</div>
+             <div class = "card5"><div class="card-category-header">Historia</div>1978</div>
+             <div class = "card5"><div class="card-category-header">Historia</div>1994</div>
+             <div class = "card5"><div class="card-category-header">Historia</div>El mejor año de su vida</div>
+             <div class = "card5"><div class="card-category-header">Historia</div>Los cambiados que ha visto</div>
+             <div class = "card5"><div class="card-category-header">Historia</div>El mundo del futuro</div>
+
+        </div>
+        
+         <div ID = "set6">     
+             <div class = "card6"><div class="card-category-header">Lugares</div>Donde nasció</div>
+             <div class = "card6"><div class="card-category-header">Lugares</div>Donde cresció</div>
+             <div class = "card6"><div class="card-category-header">Lugares</div>Su colegio</div>
+             <div class = "card6"><div class="card-category-header">Lugares</div>Sus casas</div>
+             <div class = "card6"><div class="card-category-header">Lugares</div>Su país</div>
+             <div class = "card6"><div class="card-category-header">Lugares</div>Otro país que visitó</div>
+        </div>
+        
+        
+
+    </div>
+        
+    
+    
+
+<body>
+</body>
+</html>
